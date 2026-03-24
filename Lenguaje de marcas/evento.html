@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPINESS&Co | Tech & Cultura 2026</title>
+    <!-- Tailwind CSS (via CDN browser execution) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/asenine');
+        @import url('https://fonts.cdnfonts.com/css/ar-christy');
+
+        body {
+            font-family: 'Asenine', sans-serif;
+        }
+    </style>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-brand: #ba007c;
+            --color-music: #ba007c;
+            --color-theater: #009bdb;
+            --color-expo: #ff7b00;
+            --color-other: #555555;
+            --font-sans: 'Asenine', sans-serif;
+            --font-archistry: 'AR CHRISTY', serif;
+        }
+        .nav-link { @apply text-gray-600 hover:text-brand transition-colors duration-300 font-semibold; }
+        .btn-primary { @apply inline-block bg-brand text-white px-6 py-2 rounded-full transition-colors shadow-md hover:shadow-lg font-bold hover:opacity-80; }
+        .card { @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100; }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen text-lg md:text-xl leading-relaxed">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="flex flex-col items-center group">
+                <img src="assets/images/happines-and-co-propuesta-03.png" alt="HAPPINESS&Co Logo"
+                    class="h-16 object-contain group-hover:scale-105 transition-transform duration-300">
+            </a>
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-6">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="eventos.html" class="nav-link">Próximos eventos</a></li>
+                    <li><a href="historial.html" class="nav-link">Historial de eventos</a></li>
+                    <li><a href="sobre-nosotros.html" class="nav-link">Sobre nosotros</a></li>
+                    <li><a href="fuentes.html" class="nav-link">Fuentes</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-10 flex-grow">
+        <div class="flex flex-col lg:flex-row gap-10">
+            <!-- Event Details -->
+            <div class="lg:w-2/3">
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                    <!-- Image Poster -->
+                    <div class="relative h-96">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1200&h=600"
+                            alt="Cartel del Evento" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent flex flex-col justify-end p-8">
+                            <span
+                                class="bg-other text-white text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full w-max mb-3">Conferencia</span>
+                            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-2 drop-shadow-md">Tech &
+                                Cultura 2026</h2>
+                        </div>
+                    </div>
+
+                    <!-- Texts -->
+                    <div class="p-8">
+                        <div class="flex flex-col md:flex-row gap-6 mb-8 border-b border-gray-200 pb-8">
+                            <div class="flex-1 flex gap-3 text-gray-700">
+                                <svg class="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Fecha y Hora</h5>
+                                    <p>01 de Enero, 2026</p>
+                                </div>
+                            </div>
+                            <div class="flex-1 flex gap-3 text-gray-700">
+                                <svg class="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Ubicación</h5>
+                                    <p>Centro de Convenciones, Sala 3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prose max-w-none text-gray-600">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Sobre este evento</h3>
+                            <p class="mb-4">
+                                Un encuentro clave para entender cómo la tecnología está modelando el panorama cultural
+                                del futuro. Expertos de toda la comunidad debatirán sobre IA en el arte, nuevos formatos
+                                de literatura y más.
+                            </p>
+                            <p>
+                                El evento ha estado lleno de sorpresas, y fue un rotundo éxito debido a la gran
+                                participación de asistentes. ¡No te pierdas los increíbles momentos en la galería a
+                                continuación!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Section (Visible if past event) -->
+                <section class="mt-12 bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        Galería del evento
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=400&h=300"
+                            alt="Galería 1"
+                            class="rounded-xl w-full h-48 object-cover hover:opacity-90 transition-opacity cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&q=80&w=400&h=300"
+                            alt="Galería 2"
+                            class="rounded-xl w-full h-48 object-cover hover:opacity-90 transition-opacity cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80&w=400&h=300"
+                            alt="Galería 3"
+                            class="rounded-xl w-full h-48 object-cover hover:opacity-90 transition-opacity cursor-pointer">
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar: Recommended -->
+            <aside class="lg:w-1/3">
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sticky top-28">
+                    <h3 class="text-2xl font-extrabold text-gray-800 border-b-2 border-brand pb-2 mb-6">Recomendados
+                    </h3>
+                    <div class="flex flex-col gap-6">
+                        <div class="flex gap-4 group cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=200&h=200"
+                                alt="Cine"
+                                class="w-20 h-20 rounded-lg object-cover group-hover:opacity-80 transition-opacity">
+                            <div class="flex flex-col justify-center">
+                                <span class="text-[10px] font-bold text-theater uppercase tracking-wider">Cine</span>
+                                <h4 class="font-bold text-gray-800 group-hover:text-brand line-clamp-1"><a
+                                        href="evento.html">Cine al Aire Libre</a></h4>
+                                <p class="text-xs text-gray-500 mt-1">10 de Junio, 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t-4 border-brand">
+        <div class="container mx-auto px-4 flex flex-col items-center gap-4">
+            <img src="assets/images/happines-and-co-upper-02.png" alt="HAPPINESS&Co Logo White"
+                class="h-12 object-contain opacity-70">
+            <p class="text-sm">&copy; 2026 HAPPINESS<span class="font-archistry font-normal">&</span>Co. Todos los
+                derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
