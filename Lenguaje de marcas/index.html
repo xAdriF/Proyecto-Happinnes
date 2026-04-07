@@ -2,1002 +2,213 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HAPPINESS&Co — Agenda Cultural de Asturias</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            rosa: '#ba007c',
-            azul: '#009bdb',
-            naranja: '#ff7b00',
-            gris: '#555555',
-          },
-          fontFamily: {
-            asenine: ['Asenine', 'Futura', 'Century Gothic', 'sans-serif'],
-            archistry: ['ArChistry', 'Pinyon Script', 'Dancing Script', 'cursive'],
-          },
-        }
-      }
-    }
-  </script>
-  <style>
-    /* ── Local fonts ── */
-    @font-face {
-      font-family: 'Asenine';
-      src: local('Asenine');
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'ArChistry';
-      src: local('ArChistry');
-      font-display: swap;
-    }
-
-    /* ── Base ── */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Asenine', 'Futura', 'Century Gothic', sans-serif;
-      background-color: #fafaf8;
-      color: #333;
-    }
-
-    /* ── Logo ampersand ── */
-    .logo-amp {
-      font-family: 'ArChistry', 'Pinyon Script', 'Dancing Script', cursive;
-      font-size: 2.4rem;
-      line-height: 1;
-      color: #ba007c;
-      display: inline-block;
-      vertical-align: middle;
-      transform: translateY(-2px);
-    }
-
-    .logo-text {
-      font-family: 'Asenine', 'Futura', 'Century Gothic', sans-serif;
-      font-weight: 900;
-      letter-spacing: 0.04em;
-    }
-
-    /* ── Hero ── */
-    .hero-section {
-      position: relative;
-      width: 100%;
-      height: 92vh;
-      min-height: 540px;
-      overflow: hidden;
-    }
-
-    .hero-section img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-      display: block;
-      transition: transform 8s ease;
-    }
-
-    .hero-section:hover img {
-      transform: scale(1.04);
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom,
-          rgba(0, 0, 0, 0.08) 0%,
-          rgba(0, 0, 0, 0.18) 40%,
-          rgba(186, 0, 124, 0.55) 100%);
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: #ba007c;
-      color: #fff;
-      font-family: 'Asenine', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.9rem;
-      border-radius: 2px;
-      margin-bottom: 1rem;
-    }
-
-    .hero-title {
-      font-family: 'Asenine', 'Futura', 'Century Gothic', sans-serif;
-      font-weight: 900;
-      font-size: clamp(2.4rem, 6vw, 5.2rem);
-      line-height: 1.05;
-      color: #fff;
-      letter-spacing: -0.01em;
-      text-shadow: 0 4px 32px rgba(0, 0, 0, 0.35);
-    }
-
-    .hero-meta {
-      font-family: 'Asenine', sans-serif;
-      font-size: 0.88rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.82);
-    }
-
-    /* ── Nav ── */
-    .nav-link {
-      position: relative;
-      font-family: 'Asenine', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #fff;
-      padding-bottom: 2px;
-      transition: color 0.2s;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #ba007c;
-      transition: width 0.3s ease;
-    }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-      width: 100%;
-    }
-
-    .nav-link:hover {
-      color: #f9d9ef;
-    }
-
-    .nav-link.active {
-      color: #f9d9ef;
-    }
-
-    /* ── Section labels ── */
-    .section-label {
-      font-family: 'Asenine', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #ba007c;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 1.4rem;
-    }
-
-    .section-label::before {
-      content: '';
-      display: block;
-      width: 28px;
-      height: 2px;
-      background: #ba007c;
-      flex-shrink: 0;
-    }
-
-    /* ── Event cards ── */
-    .event-card {
-      background: #fff;
-      border-radius: 4px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-      transition: transform 0.35s cubic-bezier(.22, .68, 0, 1.2), box-shadow 0.35s ease;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .event-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 18px 48px rgba(186, 0, 124, 0.14);
-    }
-
-    .event-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-
-    .event-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .card-img-wrap {
-      overflow: hidden;
-    }
-
-    /* ── Category pills ── */
-    .cat-pill {
-      display: inline-block;
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      padding: 0.22rem 0.7rem;
-      border-radius: 2px;
-      color: #fff;
-    }
-
-    .cat-musica {
-      background: #ba007c;
-    }
-
-    .cat-teatro {
-      background: #009bdb;
-    }
-
-    .cat-expo {
-      background: #ff7b00;
-    }
-
-    .cat-otros {
-      background: #555555;
-    }
-
-    /* ── Sidebar recomendados ── */
-    .rec-item {
-      display: flex;
-      gap: 0.75rem;
-      align-items: flex-start;
-      padding: 0.8rem 0;
-      border-bottom: 1px solid #f0ece8;
-      transition: background 0.2s;
-    }
-
-    .rec-item:last-child {
-      border-bottom: none;
-    }
-
-    .rec-item img {
-      width: 62px;
-      height: 62px;
-      object-fit: cover;
-      border-radius: 3px;
-      flex-shrink: 0;
-    }
-
-    .rec-item-title {
-      font-family: 'Asenine', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-      line-height: 1.3;
-      color: #222;
-      transition: color 0.2s;
-    }
-
-    .rec-item:hover .rec-item-title {
-      color: #ba007c;
-    }
-
-    .rec-date {
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #aaa;
-      margin-top: 0.2rem;
-    }
-
-    /* ── Footer ── */
-    footer {
-      background: #111;
-    }
-
-    .footer-logo-amp {
-      font-family: 'ArChistry', 'Pinyon Script', cursive;
-      font-size: 2rem;
-      color: #ba007c;
-      vertical-align: middle;
-    }
-
-    .footer-logo-text {
-      font-family: 'Asenine', sans-serif;
-      font-weight: 900;
-      letter-spacing: 0.06em;
-      color: #fff;
-    }
-
-    .social-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 1.5px solid rgba(255, 255, 255, 0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: border-color 0.2s, background 0.2s;
-    }
-
-    .social-icon:hover {
-      border-color: #ba007c;
-      background: rgba(186, 0, 124, 0.15);
-    }
-
-    /* ── Decorative strip ── */
-    .color-strip {
-      height: 4px;
-      background: linear-gradient(90deg, #ba007c 0%, #ba007c 33%, #009bdb 33%, #009bdb 66%, #ff7b00 66%, #ff7b00 100%);
-    }
-
-    /* ── Button ── */
-    .btn-rosa {
-      display: inline-block;
-      background: #ba007c;
-      color: #fff;
-      font-family: 'Asenine', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      padding: 0.6rem 1.3rem;
-      border-radius: 2px;
-      transition: background 0.2s, transform 0.2s;
-      text-decoration: none;
-    }
-
-    .btn-rosa:hover {
-      background: #96005f;
-      transform: translateY(-1px);
-    }
-
-    .btn-outline {
-      display: inline-block;
-      border: 1.5px solid #ba007c;
-      color: #ba007c;
-      font-family: 'Asenine', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      padding: 0.55rem 1.2rem;
-      border-radius: 2px;
-      transition: background 0.2s, color 0.2s;
-      text-decoration: none;
-    }
-
-    .btn-outline:hover {
-      background: #ba007c;
-      color: #fff;
-    }
-
-    /* ── Scroll reveal ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
-    }
-
-    .reveal-delay-1 {
-      transition-delay: 0.1s;
-    }
-
-    .reveal-delay-2 {
-      transition-delay: 0.22s;
-    }
-
-    .reveal-delay-3 {
-      transition-delay: 0.34s;
-    }
-
-    /* ── Mobile menu ── */
-    #mobile-menu {
-      display: none;
-    }
-
-    #mobile-menu.open {
-      display: block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPINESS&Co - Agenda Cultural de Asturias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="antialiased">
+<body class="antialiased min-h-screen flex flex-col">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"><img src="assets/images/happines-and-co-propuesta-02.png" alt="Happiness&Co"
+                            class="h-12 w-auto"></a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-musica nav-link">Inicio</a>
+                    <a href="proximos.html" class="text-neutro nav-link">Próximos Eventos</a>
+                    <a href="historial.html" class="text-neutro nav-link">Historial</a>
+                    <a href="nosotros.html" class="text-neutro nav-link">Nosotros</a>
+                    <a href="fuentes.html" class="text-neutro nav-link">Fuentes</a>
+                    <a href="contacto.html" class="text-neutro nav-link">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-  <!-- ═══════════════════════════════════════════
-       COLOR STRIP (top accent)
-  ═══════════════════════════════════════════ -->
-  <div class="color-strip"></div>
+    <section class="relative bg-gray-900 h-96 flex items-center justify-center">
+        <img src="assets/images/METROPOLIGIJON_.jpg" alt="Metrópoli Gijón"
+            class="absolute inset-0 w-full h-full object-cover opacity-50">
+        <div class="relative z-10 text-center px-4">
+            <span class="bg-musica text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">Música /
+                Festival</span>
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white mt-4 mb-2 drop-shadow-lg">Metrópoli Gijón 2026
+            </h1>
+            <p class="text-xl text-gray-200 mb-6 drop-shadow-md">03-07-2026 | Recinto Ferial Luis Adaro, Gijón</p>
+            <a href="detalle-evento.html" class="btn-principal text-lg shadow-lg">Ver Detalles</a>
+        </div>
+    </section>
 
-  <!-- ═══════════════════════════════════════════
-       HEADER / NAV
-  ═══════════════════════════════════════════ -->
-  <header class="fixed top-1 left-0 right-0 z-50 w-full" style="top:4px;">
-    <div class="mx-auto max-w-7xl px-6">
-      <nav class="flex items-center justify-between h-16 rounded-sm"
-        style="background:rgba(17,17,17,0.88); backdrop-filter:blur(12px); padding: 0 1.5rem;">
+    <div class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <main class="lg:col-span-3">
+                <div class="flex items-center justify-between mb-8 border-b pb-4 border-gray-200">
+                    <h2 class="text-3xl font-bold text-gray-800">Próximos Eventos</h2>
+                    <a href="proximos.html" class="text-musica font-semibold hover:underline">Ver todos &rarr;</a>
+                </div>
 
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center no-underline select-none">
-          <img src="assets/images/happines-and-co-propuesta-06.jpg" alt="HAPPINESS&Co" style="height:38px; width:auto;">
-        </a>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="tarjeta-evento flex flex-col">
+                        <div class="relative h-48">
+                            <img src="assets/images/METROPOLIGIJON_.jpg" alt="Metrópoli Gijón"
+                                class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="etiqueta-categoria bg-musica">Música</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <time class="text-sm font-semibold text-musica mb-1">26 de Junio - 5 de Julio</time>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Metrópoli Gijón 2026</h3>
+                            <p class="text-neutro mb-4 flex-grow">Metrópoli Gijón es un gran festival de cultura, música
+                                y entretenimiento que se celebra anualmente durante el verano en el Recinto Ferial Luis
+                                Adaro de Gijón.</p>
+                            <a href="detalle-evento.html" class="font-bold text-musica hover:underline mt-auto">Saber
+                                más</a>
+                        </div>
+                    </article>
 
-        <!-- Desktop nav -->
-        <ul class="hidden md:flex items-center gap-7 list-none m-0 p-0">
-          <li><a href="index.html" class="nav-link active">Inicio</a></li>
-          <li><a href="proximos.html" class="nav-link">Próximos Eventos</a></li>
-          <li><a href="historial.html" class="nav-link">Historial</a></li>
-          <li><a href="nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-          <li><a href="fuentes.html" class="nav-link">Fuentes</a></li>
-          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
-        </ul>
+                    <article class="tarjeta-evento flex flex-col">
+                        <div class="relative h-48">
+                            <img src="assets/images/ExposicionRerunNatura.jpg" alt="Exposicion De Rerum Natura"
+                                alt="Arte" class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="etiqueta-categoria bg-expo">Exposición</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <time class="text-sm font-semibold text-expo mb-1">12 de Septiembre de 2026</time>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">De rerum natura</h3>
+                            <p class="text-neutro mb-4 flex-grow">Un viaje a lo recóndito a través de la obra de seis
+                                artistas de distinta expresión y técnica que, sin embargo, hallan en la naturaleza, su
+                                observación e inmersión, el aliento de su producción.</p>
+                            <a href="#" class="font-bold text-expo hover:underline mt-auto">Saber más</a>
+                        </div>
+                    </article>
 
-        <!-- Mobile hamburger -->
-        <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menú">
-          <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="bar1"></span>
-          <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="bar2"></span>
-          <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="bar3"></span>
-        </button>
-      </nav>
+                    <article class="tarjeta-evento flex flex-col">
+                        <div class="relative h-48">
+                            <img src="assets/images/LaOdisea.jpg" alt="La Odisea" class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="etiqueta-categoria bg-cine-teatro">Cine</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <time class="text-sm font-semibold text-cine-teatro mb-1">17 de Julio de 2026</time>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">The Odyssey</h3>
+                            <p class="text-neutro mb-4 flex-grow">Una epopeya mitológica que sigue la historia de Odiseo
+                                y su largo viaje a casa, de 10 años de duración, tras la guerra de Troya.</p>
+                            <a href="#" class="font-bold text-cine-teatro hover:underline mt-auto">Saber más</a>
+                        </div>
+                    </article>
 
-      <!-- Mobile menu dropdown -->
-      <div id="mobile-menu" class="md:hidden rounded-b-sm" style="background:rgba(17,17,17,0.96);">
-        <ul class="flex flex-col px-6 py-4 gap-4 list-none m-0">
-          <li><a href="index.html" class="nav-link">Inicio</a></li>
-          <li><a href="proximos.html" class="nav-link">Próximos Eventos</a></li>
-          <li><a href="historial.html" class="nav-link">Historial</a></li>
-          <li><a href="nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-          <li><a href="fuentes.html" class="nav-link">Fuentes</a></li>
-          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
-        </ul>
-      </div>
+                    <article class="tarjeta-evento flex flex-col">
+                        <div class="relative h-48">
+                            <img src="assets/images/AmericanBufalo.jpg" alt="American Buffalo"
+                                class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="etiqueta-categoria bg-cine-teatro">Teatro</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <time class="text-sm font-semibold text-cine-teatro mb-1">6 de junio de 2026</time>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">American Buffalo</h3>
+                            <p class="text-neutro mb-4 flex-grow">American Buffalo es una obra de 1975 del dramaturgo
+                                estadounidense David Mamet que se estrenó en el Goodman Theatre de Chicago.</p>
+                            <a href="#" class="font-bold text-cine-teatro hover:underline mt-auto">Saber más</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-evento flex flex-col">
+                        <div class="relative h-48">
+                            <img src="assets/images/BoombasticAsturias.jpg" alt="Boombastic Asturias"
+                                class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="etiqueta-categoria bg-musica">Música</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <time class="text-sm font-semibold text-musica mb-1">16, 17 y 18 de Julio de 2026</time>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Boombastic Asturias 2026</h3>
+                            <p class="text-neutro mb-4 flex-grow">Con un cartel con artistas de la talla de Bad
+                                Gyal, Estopa o Emilia, Boombastic Asturias promete el mejor espectáculo de música pop y
+                                urbana de la temporada.</p>
+                            <a href="detalle-evento.html" class="font-bold text-musica hover:underline mt-auto">Saber
+                                más</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-evento flex flex-col">
+                        <div class="relative h-48">
+                            <img src="assets/images/EvaristoVallejpg.jpg" alt="Exposicion Evaristo Valle" alt="Arte"
+                                class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="etiqueta-categoria bg-expo">Exposición</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <time class="text-sm font-semibold text-expo mb-1">19 de Octubre de 2026</time>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Miradas cruzadas | 75 aniversario del Museo
+                            </h3>
+                            <p class="text-neutro mb-4 flex-grow">Muestra colectiva con 130 obras de 48 artistas.
+                                Revisión
+                                histórica del museo y su colección por el 75 aniverasario del museo Evaristo Valle.</p>
+                            <a href="#" class="font-bold text-expo hover:underline mt-auto">Saber más</a>
+                        </div>
+                    </article>
+                </div>
+            </main>
+
+            <aside class="lg:col-span-1">
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-musica sticky top-28">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Recomendados</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start space-x-4">
+                            <img src="assets/images/Orquesta2.jpg" alt="Sinfónica"
+                                class="w-16 h-16 rounded-md object-cover flex-shrink-0">
+                            <div>
+                                <span class="text-xs font-bold text-musica uppercase">Música</span>
+                                <h4 class="text-sm font-bold text-gray-800 leading-tight mt-1"><a
+                                        href="detalle-evento.html" class="hover:underline">Concierto Sinfónica del
+                                        Principado</a></h4>
+                                <p class="text-xs text-neutro mt-1">Historial</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <img src="assets/images/AmericanBufalo.jpg" alt="American Buffalo"
+                                class="w-16 h-16 rounded-md object-cover flex-shrink-0">
+                            <div>
+                                <span class="text-xs font-bold text-cine-teatro uppercase">Teatro</span>
+                                <h4 class="text-sm font-bold text-gray-800 leading-tight mt-1"><a href="#"
+                                        class="hover:underline">American Buffalo</a></h4>
+                                <p class="text-xs text-neutro mt-1">Historial</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
     </div>
-  </header>
 
-  <!-- ═══════════════════════════════════════════
-       HERO — Evento Destacado
-       (Festival de Jazz de Gijón, Julio 2026)
-  ═══════════════════════════════════════════ -->
-  <section class="hero-section">
-    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1920&q=85"
-      alt="Festival de Jazz de Gijón 2026" loading="eager" />
-    <div class="hero-overlay"></div>
-
-    <!-- Hero content -->
-    <div class="absolute inset-0 flex flex-col justify-end pb-16 px-8 md:px-16 max-w-5xl">
-      <span class="hero-badge">Evento Destacado · Música</span>
-      <h1 class="hero-title mt-1 mb-4 max-w-3xl">
-        Festival Internacional<br>de Jazz de Gijón 2026
-      </h1>
-      <div class="flex flex-wrap items-center gap-5 mb-7">
-        <p class="hero-meta">📅 12 – 18 Julio 2026</p>
-        <p class="hero-meta">📍 Teatro Jovellanos · Gijón, Asturias</p>
-      </div>
-      <div class="flex gap-4 flex-wrap">
-        <a href="evento.html?id=jazz2026" class="btn-rosa">Ver evento</a>
-        <a href="proximos.html" class="btn-outline">Todos los próximos</a>
-      </div>
-    </div>
-
-    <!-- Scroll hint -->
-    <div class="absolute bottom-8 right-8 flex flex-col items-center gap-2 opacity-60">
-      <span class="text-white text-xs tracking-widest uppercase"
-        style="font-family:'Asenine',sans-serif;font-size:0.6rem;">Scroll</span>
-      <div
-        style="width:1px;height:40px;background:rgba(255,255,255,0.5);animation:scrollPulse 1.8s ease-in-out infinite;">
-      </div>
-    </div>
-  </section>
-
-  <style>
-    @keyframes scrollPulse {
-
-      0%,
-      100% {
-        opacity: 0.3;
-        transform: scaleY(1);
-      }
-
-      50% {
-        opacity: 1;
-        transform: scaleY(1.3);
-      }
-    }
-  </style>
-
-  <!-- ═══════════════════════════════════════════
-       MAIN CONTENT  (cards + sidebar)
-  ═══════════════════════════════════════════ -->
-  <main class="max-w-7xl mx-auto px-6 py-16 md:py-24">
-    <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
-
-      <!-- ─── PRIMARY COLUMN ─── -->
-      <div class="flex-1 min-w-0">
-
-        <!-- Section heading -->
-        <div class="reveal">
-          <div class="section-label">Próximos Eventos</div>
-          <h2 class="text-3xl md:text-4xl font-black tracking-tight text-gray-900 mb-2"
-            style="font-family:'Asenine',sans-serif; letter-spacing:-0.02em;">
-            Lo que viene en Asturias
-          </h2>
-          <p class="text-gris text-sm mb-10 max-w-xl" style="color:#555;">
-            Selección de los mejores eventos culturales que no puedes perderte este verano en el Principado.
-          </p>
+    <footer class="bg-gray-900 text-white py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <div class="mb-2"><img src="assets/images/happines-and-co-propuesta-02.png" alt="Happiness&Co"
+                        class="h-10 w-auto brightness-0 invert"></div>
+                <p class="text-gray-400 text-sm">Tu agenda cultural joven y dinámica en Asturias.</p>
+            </div>
+            <div class="flex space-x-6 mb-6 md:mb-0">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">TikTok</a>
+            </div>
+            <div class="text-gray-500 text-sm">
+                &copy; 2026 HAPPINESS&Co. Todos los derechos reservados.
+            </div>
         </div>
-
-        <!-- ─ Card grid ─ -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
-
-          <!-- CARD 1 · Música · Festival Jazz -->
-          <article class="event-card reveal reveal-delay-1">
-            <div class="card-img-wrap relative">
-              <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80"
-                alt="Festival de Jazz de Gijón" />
-              <span class="cat-pill cat-musica absolute top-3 left-3">Música</span>
-            </div>
-            <div class="flex flex-col flex-1 p-5">
-              <p class="text-xs tracking-widest uppercase mb-2" style="color:#ba007c;font-family:'Asenine',sans-serif;">
-                12 – 18 Jul 2026 · Gijón
-              </p>
-              <h3 class="text-base font-black leading-tight mb-2 text-gray-900"
-                style="font-family:'Asenine',sans-serif;">
-                Festival Internacional de Jazz de Gijón 2026
-              </h3>
-              <p class="text-xs leading-relaxed text-gray-500 mb-5 flex-1">
-                Seis noches de jazz de primer nivel en el Teatro Jovellanos. Artistas internacionales,
-                jam sessions al aire libre y talleres de improvisación en el corazón de Gijón.
-              </p>
-              <a href="evento.html?id=jazz2026" class="btn-rosa self-start">Más información</a>
-            </div>
-          </article>
-
-          <!-- CARD 2 · Exposición · Asturias Verde -->
-          <article class="event-card reveal reveal-delay-2">
-            <div class="card-img-wrap relative">
-              <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=600&q=80"
-                alt="Exposición Asturias Verde" />
-              <span class="cat-pill cat-expo absolute top-3 left-3">Exposición</span>
-            </div>
-            <div class="flex flex-col flex-1 p-5">
-              <p class="text-xs tracking-widest uppercase mb-2" style="color:#ff7b00;font-family:'Asenine',sans-serif;">
-                05 Jun – 28 Ago 2026 · Oviedo
-              </p>
-              <h3 class="text-base font-black leading-tight mb-2 text-gray-900"
-                style="font-family:'Asenine',sans-serif;">
-                Asturias Verde: Naturaleza y Pintura
-              </h3>
-              <p class="text-xs leading-relaxed text-gray-500 mb-5 flex-1">
-                Una colección de 80 obras de artistas asturianos contemporáneos que celebran los paisajes
-                únicos del Principado: costa, montaña y prados eternamente verdes.
-              </p>
-              <a href="evento.html?id=asturias-verde" class="btn-rosa self-start">Más información</a>
-            </div>
-          </article>
-
-          <!-- CARD 3 · Teatro · La Regenta -->
-          <article class="event-card reveal reveal-delay-3">
-            <div class="card-img-wrap relative">
-              <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&q=80"
-                alt="La Regenta en el Teatro Campoamor" />
-              <span class="cat-pill cat-teatro absolute top-3 left-3">Teatro</span>
-            </div>
-            <div class="flex flex-col flex-1 p-5">
-              <p class="text-xs tracking-widest uppercase mb-2" style="color:#009bdb;font-family:'Asenine',sans-serif;">
-                22 – 30 Ago 2026 · Oviedo
-              </p>
-              <h3 class="text-base font-black leading-tight mb-2 text-gray-900"
-                style="font-family:'Asenine',sans-serif;">
-                La Regenta — Teatro Campoamor
-              </h3>
-              <p class="text-xs leading-relaxed text-gray-500 mb-5 flex-1">
-                La gran obra de Clarín vuelve al escenario del mítico Teatro Campoamor de Oviedo.
-                Dirección de Ernesto Caballero y elenco de primera línea nacional. Solo 8 funciones.
-              </p>
-              <a href="evento.html?id=la-regenta" class="btn-rosa self-start">Más información</a>
-            </div>
-          </article>
-
-        </div><!-- /grid -->
-
-        <!-- CTA ver todos -->
-        <div class="flex justify-center mt-12 reveal">
-          <a href="proximos.html" class="btn-outline">Ver todos los próximos eventos →</a>
-        </div>
-
-        <!-- ───────────────────────────────────────
-             HISTORIAL STRIP (teaser)
-        ─────────────────────────────────────── -->
-        <div class="mt-20 reveal">
-          <div class="section-label" style="color:#555;">
-            <span style="background:#555;" class="block" style="width:28px;height:2px;flex-shrink:0;"></span>
-            Historial de Eventos
-          </div>
-          <h2 class="text-2xl md:text-3xl font-black tracking-tight text-gray-900 mb-8"
-            style="font-family:'Asenine',sans-serif;">
-            Lo que ya vivimos
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
-
-          <!-- HISTORIAL CARD 1 -->
-          <article class="event-card reveal reveal-delay-1">
-            <div class="card-img-wrap relative">
-              <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&q=80"
-                alt="Semana Negra Gijón 2025" />
-              <span class="cat-pill cat-otros absolute top-3 left-3">Literatura</span>
-              <div class="absolute inset-0 flex items-center justify-center" style="background:rgba(0,0,0,0.35);">
-                <span class="text-white font-black text-xs tracking-widest uppercase"
-                  style="font-family:'Asenine',sans-serif; letter-spacing:0.2em;">PASADO</span>
-              </div>
-            </div>
-            <div class="flex flex-col flex-1 p-5">
-              <p class="text-xs tracking-widest uppercase mb-2 text-gray-400" style="font-family:'Asenine',sans-serif;">
-                Jul 2025 · Gijón
-              </p>
-              <h3 class="text-sm font-black leading-tight mb-2 text-gray-700" style="font-family:'Asenine',sans-serif;">
-                Semana Negra de Gijón 2025
-              </h3>
-              <a href="evento.html?id=semana-negra-2025"
-                class="text-xs font-bold tracking-wider uppercase text-gray-400 hover:text-rosa mt-auto"
-                style="color:#ba007c;text-decoration:none;">Ver recuerdo →</a>
-            </div>
-          </article>
-
-          <!-- HISTORIAL CARD 2 -->
-          <article class="event-card reveal reveal-delay-2">
-            <div class="card-img-wrap relative">
-              <img src="https://images.unsplash.com/photo-1578321272125-4e4c4a5e8b97?w=600&q=80"
-                alt="Arte Contemporáneo Oviedo 2025" />
-              <span class="cat-pill cat-expo absolute top-3 left-3">Exposición</span>
-              <div class="absolute inset-0 flex items-center justify-center" style="background:rgba(0,0,0,0.35);">
-                <span class="text-white font-black text-xs tracking-widest uppercase"
-                  style="font-family:'Asenine',sans-serif; letter-spacing:0.2em;">PASADO</span>
-              </div>
-            </div>
-            <div class="flex flex-col flex-1 p-5">
-              <p class="text-xs tracking-widest uppercase mb-2 text-gray-400" style="font-family:'Asenine',sans-serif;">
-                Mar 2025 · Oviedo
-              </p>
-              <h3 class="text-sm font-black leading-tight mb-2 text-gray-700" style="font-family:'Asenine',sans-serif;">
-                Bienal de Arte Contemporáneo de Oviedo
-              </h3>
-              <a href="evento.html?id=bienal-2025" class="text-xs font-bold tracking-wider uppercase mt-auto"
-                style="color:#ba007c;text-decoration:none;">Ver recuerdo →</a>
-            </div>
-          </article>
-
-          <!-- HISTORIAL CARD 3 -->
-          <article class="event-card reveal reveal-delay-3">
-            <div class="card-img-wrap relative">
-              <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=600&q=80"
-                alt="Concierto Auditorio Príncipe" />
-              <span class="cat-pill cat-musica absolute top-3 left-3">Música</span>
-              <div class="absolute inset-0 flex items-center justify-center" style="background:rgba(0,0,0,0.35);">
-                <span class="text-white font-black text-xs tracking-widest uppercase"
-                  style="font-family:'Asenine',sans-serif; letter-spacing:0.2em;">PASADO</span>
-              </div>
-            </div>
-            <div class="flex flex-col flex-1 p-5">
-              <p class="text-xs tracking-widest uppercase mb-2 text-gray-400" style="font-family:'Asenine',sans-serif;">
-                Nov 2025 · Oviedo
-              </p>
-              <h3 class="text-sm font-black leading-tight mb-2 text-gray-700" style="font-family:'Asenine',sans-serif;">
-                Gala Lírica — Auditorio Príncipe de Asturias
-              </h3>
-              <a href="evento.html?id=gala-lirica-2025" class="text-xs font-bold tracking-wider uppercase mt-auto"
-                style="color:#ba007c;text-decoration:none;">Ver recuerdo →</a>
-            </div>
-          </article>
-
-        </div>
-
-        <div class="flex justify-center mt-10 reveal">
-          <a href="historial.html" class="btn-outline">Ver todo el historial →</a>
-        </div>
-
-      </div><!-- /primary column -->
-
-      <!-- ─── SIDEBAR ─── -->
-      <aside class="w-full lg:w-72 flex-shrink-0">
-        <div class="sticky top-28">
-
-          <!-- Recomendados widget -->
-          <div class="bg-white rounded-sm shadow-sm p-6 mb-8 reveal" style="border-top: 3px solid #ba007c;">
-            <div class="section-label mb-4">Recomendados</div>
-
-            <!-- rec 1 -->
-            <a href="evento.html?id=jazz2026" style="text-decoration:none;">
-              <div class="rec-item">
-                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=120&q=70" alt="Jazz Gijón" />
-                <div>
-                  <p class="rec-item-title">Festival de Jazz de Gijón 2026</p>
-                  <p class="rec-date">12 – 18 Jul 2026 · <span style="color:#ba007c;">Música</span></p>
-                </div>
-              </div>
-            </a>
-
-            <!-- rec 2 -->
-            <a href="evento.html?id=asturias-verde" style="text-decoration:none;">
-              <div class="rec-item">
-                <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=120&q=70" alt="Asturias Verde" />
-                <div>
-                  <p class="rec-item-title">Asturias Verde: Naturaleza y Pintura</p>
-                  <p class="rec-date">Jun – Ago 2026 · <span style="color:#ff7b00;">Exposición</span></p>
-                </div>
-              </div>
-            </a>
-
-            <!-- rec 3 -->
-            <a href="evento.html?id=la-regenta" style="text-decoration:none;">
-              <div class="rec-item">
-                <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=120&q=70" alt="La Regenta" />
-                <div>
-                  <p class="rec-item-title">La Regenta — T. Campoamor</p>
-                  <p class="rec-date">22 – 30 Ago 2026 · <span style="color:#009bdb;">Teatro</span></p>
-                </div>
-              </div>
-            </a>
-
-            <!-- rec 4 -->
-            <a href="evento.html?id=celtic-2026" style="text-decoration:none;">
-              <div class="rec-item">
-                <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=120&q=70"
-                  alt="Celtic Cultures" />
-                <div>
-                  <p class="rec-item-title">Celtic Cultures Festival — Avilés</p>
-                  <p class="rec-date">15 – 17 Ago 2026 · <span style="color:#ba007c;">Música</span></p>
-                </div>
-              </div>
-            </a>
-
-            <!-- rec 5 -->
-            <a href="evento.html?id=cine-gijon" style="text-decoration:none;">
-              <div class="rec-item">
-                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=120&q=70" alt="Cine Gijón" />
-                <div>
-                  <p class="rec-item-title">63.ª Semana de Cine de Gijón</p>
-                  <p class="rec-date">Nov 2026 · <span style="color:#009bdb;">Cine</span></p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Newsletter mini widget -->
-          <div class="rounded-sm p-6 reveal" style="background: linear-gradient(135deg, #ba007c 0%, #7a004f 100%);">
-            <p class="text-white font-black text-base mb-1 leading-tight" style="font-family:'Asenine',sans-serif;">
-              Agenda en tu bandeja
-            </p>
-            <p class="text-pink-200 text-xs mb-4 leading-relaxed">
-              Suscríbete y recibe los mejores eventos de Asturias cada semana.
-            </p>
-            <a href="contacto.html"
-              class="block w-full text-center bg-white text-xs font-black tracking-widest uppercase py-2.5 rounded-sm transition-all hover:bg-pink-100"
-              style="font-family:'Asenine',sans-serif; color:#ba007c; text-decoration:none;">
-              Suscribirme
-            </a>
-          </div>
-
-          <!-- Categorías widget -->
-          <div class="bg-white rounded-sm shadow-sm p-6 mt-8 reveal" style="border-top: 3px solid #555;">
-            <div class="section-label" style="color:#555;">
-              <span style="background:#555; display:block; width:28px; height:2px; flex-shrink:0;"></span>
-              Categorías
-            </div>
-            <div class="flex flex-col gap-2">
-              <a href="proximos.html#musica"
-                class="flex items-center justify-between text-xs font-bold tracking-wider uppercase hover:text-rosa transition-colors"
-                style="text-decoration:none; color:#ba007c;">
-                <span>🎵 Música</span>
-                <span class="bg-pink-100 text-rosa rounded-full px-2 py-0.5" style="color:#ba007c;">8</span>
-              </a>
-              <a href="proximos.html#teatro"
-                class="flex items-center justify-between text-xs font-bold tracking-wider uppercase hover:text-azul transition-colors"
-                style="text-decoration:none; color:#009bdb;">
-                <span>🎭 Teatro y Cine</span>
-                <span class="bg-blue-50 rounded-full px-2 py-0.5" style="color:#009bdb;">5</span>
-              </a>
-              <a href="proximos.html#expo"
-                class="flex items-center justify-between text-xs font-bold tracking-wider uppercase transition-colors"
-                style="text-decoration:none; color:#ff7b00;">
-                <span>🎨 Exposiciones</span>
-                <span class="bg-orange-50 rounded-full px-2 py-0.5" style="color:#ff7b00;">6</span>
-              </a>
-              <a href="proximos.html#otros"
-                class="flex items-center justify-between text-xs font-bold tracking-wider uppercase transition-colors"
-                style="text-decoration:none; color:#555;">
-                <span>✨ Otros</span>
-                <span class="bg-gray-100 rounded-full px-2 py-0.5 text-gray-500">4</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </aside>
-      <!-- /sidebar -->
-
-    </div><!-- /flex -->
-  </main>
-
-  <!-- ═══════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════ -->
-  <footer class="mt-12">
-    <!-- Top color strip -->
-    <div class="color-strip"></div>
-
-    <div style="background:#111;">
-      <div class="max-w-7xl mx-auto px-6 py-14">
-        <div class="flex flex-col md:flex-row gap-10 justify-between">
-
-          <!-- Logo + claim -->
-          <div class="max-w-xs">
-            <div class="flex items-center mb-4">
-              <img src="logo.png" alt="HAPPINESS&Co" style="height:36px; width:auto; filter:brightness(0) invert(1);">
-            </div>
-            <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.45); font-family:'Asenine',sans-serif;">
-              Tu agenda cultural de referencia en el Principado de Asturias. Música, teatro, exposiciones y mucho más.
-            </p>
-          </div>
-
-          <!-- Nav columns -->
-          <div class="flex flex-wrap gap-10">
-            <div>
-              <p class="text-white text-xs font-black tracking-widest uppercase mb-4"
-                style="font-family:'Asenine',sans-serif;">Agenda</p>
-              <ul class="flex flex-col gap-2 list-none p-0 m-0">
-                <li><a href="proximos.html" class="text-xs hover:text-white transition-colors"
-                    style="color:rgba(255,255,255,0.45);text-decoration:none;font-family:'Asenine',sans-serif;">Próximos
-                    Eventos</a></li>
-                <li><a href="historial.html" class="text-xs hover:text-white transition-colors"
-                    style="color:rgba(255,255,255,0.45);text-decoration:none;font-family:'Asenine',sans-serif;">Historial</a>
-                </li>
-                <li><a href="evento.html" class="text-xs hover:text-white transition-colors"
-                    style="color:rgba(255,255,255,0.45);text-decoration:none;font-family:'Asenine',sans-serif;">Ficha de
-                    Evento</a></li>
-              </ul>
-            </div>
-            <div>
-              <p class="text-white text-xs font-black tracking-widest uppercase mb-4"
-                style="font-family:'Asenine',sans-serif;">Empresa</p>
-              <ul class="flex flex-col gap-2 list-none p-0 m-0">
-                <li><a href="nosotros.html" class="text-xs hover:text-white transition-colors"
-                    style="color:rgba(255,255,255,0.45);text-decoration:none;font-family:'Asenine',sans-serif;">Sobre
-                    Nosotros</a></li>
-                <li><a href="fuentes.html" class="text-xs hover:text-white transition-colors"
-                    style="color:rgba(255,255,255,0.45);text-decoration:none;font-family:'Asenine',sans-serif;">Fuentes</a>
-                </li>
-                <li><a href="contacto.html" class="text-xs hover:text-white transition-colors"
-                    style="color:rgba(255,255,255,0.45);text-decoration:none;font-family:'Asenine',sans-serif;">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Social -->
-          <div>
-            <p class="text-white text-xs font-black tracking-widest uppercase mb-4"
-              style="font-family:'Asenine',sans-serif;">Síguenos</p>
-            <div class="flex gap-3">
-              <!-- Instagram -->
-              <a href="#" class="social-icon" aria-label="Instagram">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <circle cx="17.5" cy="6.5" r="1" fill="rgba(255,255,255,0.7)" stroke="none"></circle>
-                </svg>
-              </a>
-              <!-- Facebook -->
-              <a href="#" class="social-icon" aria-label="Facebook">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
-              </a>
-              <!-- X/Twitter -->
-              <a href="#" class="social-icon" aria-label="X / Twitter">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)">
-                  <path
-                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              <!-- YouTube -->
-              <a href="#" class="social-icon" aria-label="YouTube">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path
-                    d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z">
-                  </path>
-                  <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="rgba(255,255,255,0.7)" stroke="none">
-                  </polygon>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-        </div><!-- /flex -->
-      </div><!-- /inner -->
-
-      <!-- Copyright bar -->
-      <div style="border-top: 1px solid rgba(255,255,255,0.08);">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p class="text-xs" style="color:rgba(255,255,255,0.3); font-family:'Asenine',sans-serif;">
-            © 2026 HAPPINESS<span
-              style="font-family:'ArChistry','Pinyon Script',cursive;font-size:1.1em;color:rgba(186,0,124,0.7);">&</span>Co
-            · Agenda Cultural de Asturias · Todos los derechos reservados
-          </p>
-          <p class="text-xs" style="color:rgba(255,255,255,0.2); font-family:'Asenine',sans-serif;">
-            Diseñado con ♥ en Asturias
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ═══════════════════════════════════════════
-       JAVASCRIPT — Mobile menu + Scroll reveal
-  ═══════════════════════════════════════════ -->
-  <script>
-    // ── Mobile menu toggle ──
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const bar1 = document.getElementById('bar1');
-    const bar2 = document.getElementById('bar2');
-    const bar3 = document.getElementById('bar3');
-    let menuOpen = false;
-
-    menuBtn.addEventListener('click', () => {
-      menuOpen = !menuOpen;
-      mobileMenu.classList.toggle('open', menuOpen);
-      if (menuOpen) {
-        bar1.style.transform = 'translateY(8px) rotate(45deg)';
-        bar2.style.opacity = '0';
-        bar3.style.transform = 'translateY(-8px) rotate(-45deg)';
-      } else {
-        bar1.style.transform = '';
-        bar2.style.opacity = '';
-        bar3.style.transform = '';
-      }
-    });
-
-    // ── Scroll reveal ──
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-    reveals.forEach(el => observer.observe(el));
-
-    // ── Header shrink on scroll ──
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) {
-        header.style.top = '0';
-      } else {
-        header.style.top = '4px';
-      }
-    });
-  </script>
-
+    </footer>
 </body>
 
 </html>
