@@ -1,214 +1,352 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HAPPINESS&Co - Agenda Cultural de Asturias</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-<body class="antialiased min-h-screen flex flex-col">
+  <body class="antialiased min-h-screen flex flex-col">
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html"><img src="assets/images/happines-and-co-propuesta-02.png" alt="Happiness&Co"
-                            class="h-12 w-auto"></a>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-musica nav-link">Inicio</a>
-                    <a href="proximos.html" class="text-neutro nav-link">Próximos Eventos</a>
-                    <a href="historial.html" class="text-neutro nav-link">Historial</a>
-                    <a href="nosotros.html" class="text-neutro nav-link">Nosotros</a>
-                    <a href="fuentes.html" class="text-neutro nav-link">Fuentes</a>
-                    <a href="contacto.html" class="text-neutro nav-link">Contacto</a>
-                </nav>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="index.html"
+              ><img
+                src="assets/images/happines-and-co-propuesta-02.png"
+                alt="Happiness&Co"
+                class="h-12 w-auto"
+            /></a>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-musica nav-link">Inicio</a>
+            <a href="proximos.html" class="text-neutro nav-link"
+              >Próximos Eventos</a
+            >
+            <a href="historial.html" class="text-neutro nav-link">Historial</a>
+            <a href="nosotros.html" class="text-neutro nav-link">Nosotros</a>
+            <a href="fuentes.html" class="text-neutro nav-link">Fuentes</a>
+            <a href="contacto.html" class="text-neutro nav-link">Contacto</a>
+          </nav>
         </div>
+      </div>
     </header>
 
     <section class="relative bg-gray-900 h-96 flex items-center justify-center">
-        <img src="assets/images/METROPOLIGIJON_.jpg" alt="Metrópoli Gijón"
-            class="absolute inset-0 w-full h-full object-cover opacity-50">
-        <div class="relative z-10 text-center px-4">
-            <span class="bg-musica text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">Música /
-                Festival</span>
-            <h1 class="text-5xl md:text-6xl font-extrabold text-white mt-4 mb-2 drop-shadow-lg">Metrópoli Gijón 2026
-            </h1>
-            <p class="text-xl text-gray-200 mb-6 drop-shadow-md">03-07-2026 | Recinto Ferial Luis Adaro, Gijón</p>
-            <a href="detalle-evento.html" class="btn-principal text-lg shadow-lg">Ver Detalles</a>
-        </div>
+      <img
+        src="assets/images/METROPOLIGIJON_.jpg"
+        alt="Metrópoli Gijón"
+        class="absolute inset-0 w-full h-full object-cover opacity-50"
+      />
+      <div class="relative z-10 text-center px-4">
+        <span
+          class="bg-musica text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide"
+          >Música / Festival</span
+        >
+        <h1
+          class="text-5xl md:text-6xl font-extrabold text-white mt-4 mb-2 drop-shadow-lg"
+        >
+          Metrópoli Gijón 2026
+        </h1>
+        <p class="text-xl text-gray-200 mb-6 drop-shadow-md">
+          03-07-2026 | Recinto Ferial Luis Adaro, Gijón
+        </p>
+        <a href="evento-metropoli.html" class="btn-principal text-lg shadow-lg"
+          >Ver Detalles</a
+        >
+      </div>
     </section>
 
     <div class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <main class="lg:col-span-3">
-                <div class="flex items-center justify-between mb-8 border-b pb-4 border-gray-200">
-                    <h2 class="text-3xl font-bold text-gray-800">Próximos Eventos</h2>
-                    <a href="proximos.html" class="text-musica font-semibold hover:underline">Ver todos &rarr;</a>
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <main class="lg:col-span-3">
+          <div
+            class="flex items-center justify-between mb-8 border-b pb-4 border-gray-200"
+          >
+            <h2 class="text-3xl font-bold text-gray-800">Todos lo eventos</h2>
+            <a
+              href="proximos.html"
+              class="text-musica font-semibold hover:underline"
+              >Ver todos &rarr;</a
+            >
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article class="tarjeta-evento flex flex-col">
+              <div class="relative h-48">
+                <img
+                  src="assets/images/METROPOLIGIJON_.jpg"
+                  alt="Metrópoli Gijón"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute top-4 left-4">
+                  <span class="etiqueta-categoria bg-musica">Música</span>
                 </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col">
+                <time class="text-sm font-semibold text-musica mb-1"
+                  >26 de Junio - 5 de Julio</time
+                >
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  Metrópoli Gijón 2026
+                </h3>
+                <p class="text-neutro mb-4 flex-grow">
+                  Metrópoli Gijón es un gran festival de cultura, música y
+                  entretenimiento que se celebra anualmente durante el verano en
+                  el Recinto Ferial Luis Adaro de Gijón.
+                </p>
+                <a
+                  href="evento-metropoli.html"
+                  class="font-bold text-musica hover:underline mt-auto"
+                  >Saber más</a
+                >
+              </div>
+            </article>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <article class="tarjeta-evento flex flex-col">
-                        <div class="relative h-48">
-                            <img src="assets/images/METROPOLIGIJON_.jpg" alt="Metrópoli Gijón"
-                                class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4">
-                                <span class="etiqueta-categoria bg-musica">Música</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <time class="text-sm font-semibold text-musica mb-1">26 de Junio - 5 de Julio</time>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Metrópoli Gijón 2026</h3>
-                            <p class="text-neutro mb-4 flex-grow">Metrópoli Gijón es un gran festival de cultura, música
-                                y entretenimiento que se celebra anualmente durante el verano en el Recinto Ferial Luis
-                                Adaro de Gijón.</p>
-                            <a href="detalle-evento.html" class="font-bold text-musica hover:underline mt-auto">Saber
-                                más</a>
-                        </div>
-                    </article>
-
-                    <article class="tarjeta-evento flex flex-col">
-                        <div class="relative h-48">
-                            <img src="assets/images/ExposicionRerunNatura.jpg" alt="Exposicion De Rerum Natura"
-                                alt="Arte" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4">
-                                <span class="etiqueta-categoria bg-expo">Exposición</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <time class="text-sm font-semibold text-expo mb-1">12 de Septiembre de 2026</time>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">De rerum natura</h3>
-                            <p class="text-neutro mb-4 flex-grow">Un viaje a lo recóndito a través de la obra de seis
-                                artistas de distinta expresión y técnica que, sin embargo, hallan en la naturaleza, su
-                                observación e inmersión, el aliento de su producción.</p>
-                            <a href="#" class="font-bold text-expo hover:underline mt-auto">Saber más</a>
-                        </div>
-                    </article>
-
-                    <article class="tarjeta-evento flex flex-col">
-                        <div class="relative h-48">
-                            <img src="assets/images/LaOdisea.jpg" alt="La Odisea" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4">
-                                <span class="etiqueta-categoria bg-cine-teatro">Cine</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <time class="text-sm font-semibold text-cine-teatro mb-1">17 de Julio de 2026</time>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">The Odyssey</h3>
-                            <p class="text-neutro mb-4 flex-grow">Una epopeya mitológica que sigue la historia de Odiseo
-                                y su largo viaje a casa, de 10 años de duración, tras la guerra de Troya.</p>
-                            <a href="#" class="font-bold text-cine-teatro hover:underline mt-auto">Saber más</a>
-                        </div>
-                    </article>
-
-                    <article class="tarjeta-evento flex flex-col">
-                        <div class="relative h-48">
-                            <img src="assets/images/AmericanBufalo.jpg" alt="American Buffalo"
-                                class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4">
-                                <span class="etiqueta-categoria bg-cine-teatro">Teatro</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <time class="text-sm font-semibold text-cine-teatro mb-1">6 de junio de 2026</time>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">American Buffalo</h3>
-                            <p class="text-neutro mb-4 flex-grow">American Buffalo es una obra de 1975 del dramaturgo
-                                estadounidense David Mamet que se estrenó en el Goodman Theatre de Chicago.</p>
-                            <a href="#" class="font-bold text-cine-teatro hover:underline mt-auto">Saber más</a>
-                        </div>
-                    </article>
-
-                    <article class="tarjeta-evento flex flex-col">
-                        <div class="relative h-48">
-                            <img src="assets/images/BoombasticAsturias.jpg" alt="Boombastic Asturias"
-                                class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4">
-                                <span class="etiqueta-categoria bg-musica">Música</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <time class="text-sm font-semibold text-musica mb-1">16, 17 y 18 de Julio de 2026</time>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Boombastic Asturias 2026</h3>
-                            <p class="text-neutro mb-4 flex-grow">Con un cartel con artistas de la talla de Bad
-                                Gyal, Estopa o Emilia, Boombastic Asturias promete el mejor espectáculo de música pop y
-                                urbana de la temporada.</p>
-                            <a href="detalle-evento.html" class="font-bold text-musica hover:underline mt-auto">Saber
-                                más</a>
-                        </div>
-                    </article>
-
-                    <article class="tarjeta-evento flex flex-col">
-                        <div class="relative h-48">
-                            <img src="assets/images/EvaristoVallejpg.jpg" alt="Exposicion Evaristo Valle" alt="Arte"
-                                class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4">
-                                <span class="etiqueta-categoria bg-expo">Exposición</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <time class="text-sm font-semibold text-expo mb-1">19 de Octubre de 2026</time>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Miradas cruzadas | 75 aniversario del Museo
-                            </h3>
-                            <p class="text-neutro mb-4 flex-grow">Muestra colectiva con 130 obras de 48 artistas.
-                                Revisión
-                                histórica del museo y su colección por el 75 aniverasario del museo Evaristo Valle.</p>
-                            <a href="#" class="font-bold text-expo hover:underline mt-auto">Saber más</a>
-                        </div>
-                    </article>
+            <article class="tarjeta-evento flex flex-col">
+              <div class="relative h-48">
+                <img
+                  src="assets/images/ExposicionRerunNatura.jpg"
+                  alt="Exposicion De Rerum Natura"
+                  alt="Arte"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute top-4 left-4">
+                  <span class="etiqueta-categoria bg-expo">Exposición</span>
                 </div>
-            </main>
+              </div>
+              <div class="p-6 flex-grow flex flex-col">
+                <time class="text-sm font-semibold text-expo mb-1"
+                  >12 de Septiembre de 2026</time
+                >
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  De rerum natura
+                </h3>
+                <p class="text-neutro mb-4 flex-grow">
+                  Un viaje a lo recóndito a través de la obra de seis artistas
+                  de distinta expresión y técnica que, sin embargo, hallan en la
+                  naturaleza, su observación e inmersión, el aliento de su
+                  producción.
+                </p>
+                <a
+                  href="evento-rerum-natura.html"
+                  class="font-bold text-expo hover:underline mt-auto"
+                  >Saber más</a
+                >
+              </div>
+            </article>
 
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-musica sticky top-28">
-                    <h3 class="text-xl font-bold text-gray-900 mb-6">Recomendados</h3>
-                    <ul class="space-y-6">
-                        <li class="flex items-start space-x-4">
-                            <img src="assets/images/Orquesta2.jpg" alt="Sinfónica"
-                                class="w-16 h-16 rounded-md object-cover flex-shrink-0">
-                            <div>
-                                <span class="text-xs font-bold text-musica uppercase">Música</span>
-                                <h4 class="text-sm font-bold text-gray-800 leading-tight mt-1"><a
-                                        href="detalle-evento.html" class="hover:underline">Concierto Sinfónica del
-                                        Principado</a></h4>
-                                <p class="text-xs text-neutro mt-1">Historial</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <img src="assets/images/AmericanBufalo.jpg" alt="American Buffalo"
-                                class="w-16 h-16 rounded-md object-cover flex-shrink-0">
-                            <div>
-                                <span class="text-xs font-bold text-cine-teatro uppercase">Teatro</span>
-                                <h4 class="text-sm font-bold text-gray-800 leading-tight mt-1"><a href="#"
-                                        class="hover:underline">American Buffalo</a></h4>
-                                <p class="text-xs text-neutro mt-1">Historial</p>
-                            </div>
-                        </li>
-                    </ul>
+            <article class="tarjeta-evento flex flex-col">
+              <div class="relative h-48">
+                <img
+                  src="assets/images/LaOdisea.jpg"
+                  alt="La Odisea"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute top-4 left-4">
+                  <span class="etiqueta-categoria bg-cine-teatro">Cine</span>
                 </div>
-            </aside>
-        </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col">
+                <time class="text-sm font-semibold text-cine-teatro mb-1"
+                  >17 de Julio de 2026</time
+                >
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  The Odyssey
+                </h3>
+                <p class="text-neutro mb-4 flex-grow">
+                  Una epopeya mitológica que sigue la historia de Odiseo y su
+                  largo viaje a casa, de 10 años de duración, tras la guerra de
+                  Troya.
+                </p>
+                <a
+                  href="#"
+                  class="font-bold text-cine-teatro hover:underline mt-auto"
+                  >Saber más</a
+                >
+              </div>
+            </article>
+
+            <article class="tarjeta-evento flex flex-col">
+              <div class="relative h-48">
+                <img
+                  src="assets/images/AmericanBufalo.jpg"
+                  alt="American Buffalo"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute top-4 left-4">
+                  <span class="etiqueta-categoria bg-cine-teatro">Teatro</span>
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col">
+                <time class="text-sm font-semibold text-cine-teatro mb-1"
+                  >6 de Febrero de 2026</time
+                >
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  American Buffalo
+                </h3>
+                <p class="text-neutro mb-4 flex-grow">
+                  American Buffalo es una obra de 1975 del dramaturgo
+                  estadounidense David Mamet que se estrenó en el Goodman
+                  Theatre de Chicago.
+                </p>
+                <a
+                  href="#"
+                  class="font-bold text-cine-teatro hover:underline mt-auto"
+                  >Saber más</a
+                >
+              </div>
+            </article>
+
+            <article class="tarjeta-evento flex flex-col">
+              <div class="relative h-48">
+                <img
+                  src="assets/images/Orquesta1.jpg"
+                  alt="Orquesa Sinfónica"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute top-4 left-4">
+                  <span class="etiqueta-categoria bg-musica">Música</span>
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col">
+                <time class="text-sm font-semibold text-musica mb-1"
+                  >15 de Marzo de 2026</time
+                >
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  Concierto Sinfónica del Principado
+                </h3>
+                <p class="text-neutro mb-4 flex-grow">
+                  La Orquesta Sinfónica del Principado de Asturias (OSPA)
+                  ofreció una velada inolvidable repasando algunas de las obras
+                  más emblemáticas del repertorio clásico y romántico. Bajo la
+                  batuta del director invitado internacional, el auditorio vibró
+                  con interpretaciones magistrales que reafirmaron la calidad de
+                  nuestra orquesta regional.
+                </p>
+                <a
+                  href="evento-sinfonica.html"
+                  class="font-bold text-musica hover:underline mt-auto"
+                  >Saber más</a
+                >
+              </div>
+            </article>
+
+            <article class="tarjeta-evento flex flex-col">
+              <div class="relative h-48">
+                <img
+                  src="assets/images/EvaristoVallejpg.jpg"
+                  alt="Exposicion Evaristo Valle"
+                  alt="Arte"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute top-4 left-4">
+                  <span class="etiqueta-categoria bg-expo">Exposición</span>
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col">
+                <time class="text-sm font-semibold text-expo mb-1"
+                  >19 de Enero de 2026</time
+                >
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  Miradas cruzadas | 75 aniversario del Museo
+                </h3>
+                <p class="text-neutro mb-4 flex-grow">
+                  Muestra colectiva con 130 obras de 48 artistas. Revisión
+                  histórica del museo y su colección por el 75 aniverasario del
+                  museo Evaristo Valle.
+                </p>
+                <a href="#" class="font-bold text-expo hover:underline mt-auto"
+                  >Saber más</a
+                >
+              </div>
+            </article>
+          </div>
+        </main>
+
+        <aside class="lg:col-span-1">
+          <div
+            class="bg-white rounded-xl shadow-md p-6 border-t-4 border-musica sticky top-28"
+          >
+            <h3 class="text-xl font-bold text-gray-900 mb-6">Recomendados</h3>
+            <ul class="space-y-6">
+              <li class="flex items-start space-x-4">
+                <img
+                  src="assets/images/Orquesta2.jpg"
+                  alt="Sinfónica"
+                  class="w-16 h-16 rounded-md object-cover flex-shrink-0"
+                />
+                <div>
+                  <span class="text-xs font-bold text-musica uppercase"
+                    >Música</span
+                  >
+                  <h4
+                    class="text-sm font-bold text-gray-800 leading-tight mt-1"
+                  >
+                    <a href="evento-sinfonica.html" class="hover:underline"
+                      >Concierto Sinfónica del Principado</a
+                    >
+                  </h4>
+                  <p class="text-xs text-neutro mt-1">Historial</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-4">
+                <img
+                  src="assets/images/AmericanBufalo.jpg"
+                  alt="American Buffalo"
+                  class="w-16 h-16 rounded-md object-cover flex-shrink-0"
+                />
+                <div>
+                  <span class="text-xs font-bold text-cine-teatro uppercase"
+                    >Teatro</span
+                  >
+                  <h4
+                    class="text-sm font-bold text-gray-800 leading-tight mt-1"
+                  >
+                    <a href="#" class="hover:underline">American Buffalo</a>
+                  </h4>
+                  <p class="text-xs text-neutro mt-1">Historial</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
     </div>
 
     <footer class="bg-gray-900 text-white py-12 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-6 md:mb-0 text-center md:text-left">
-                <div class="mb-2"><img src="assets/images/happines-and-co-propuesta-02.png" alt="Happiness&Co"
-                        class="h-10 w-auto brightness-0 invert"></div>
-                <p class="text-gray-400 text-sm">Tu agenda cultural joven y dinámica en Asturias.</p>
-            </div>
-            <div class="flex space-x-6 mb-6 md:mb-0">
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">TikTok</a>
-            </div>
-            <div class="text-gray-500 text-sm">
-                &copy; 2026 HAPPINESS&Co. Todos los derechos reservados.
-            </div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <div class="mb-2">
+            <img
+              src="assets/images/happines-and-co-propuesta-02.png"
+              alt="Happiness&Co"
+              class="h-10 w-auto brightness-0 invert"
+            />
+          </div>
+          <p class="text-gray-400 text-sm">
+            Tu agenda cultural joven y dinámica en Asturias.
+          </p>
         </div>
+        <div class="flex space-x-6 mb-6 md:mb-0">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors"
+            >Instagram</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white transition-colors"
+            >Twitter</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white transition-colors"
+            >TikTok</a
+          >
+        </div>
+        <div class="text-gray-500 text-sm">
+          &copy; 2026 HAPPINESS&Co. Todos los derechos reservados.
+        </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

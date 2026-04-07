@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historial de Eventos - HAPPINESS&Co</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body class="antialiased min-h-screen flex flex-col bg-gray-100">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="index.html"
+              ><img
+                src="assets/images/happines-and-co-propuesta-02.png"
+                alt="Happiness&Co"
+                class="h-12 w-auto"
+            /></a>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-neutro nav-link">Inicio</a>
+            <a href="proximos.html" class="text-neutro nav-link"
+              >Próximos Eventos</a
+            >
+            <a href="historial.html" class="text-musica nav-link">Historial</a>
+            <a href="nosotros.html" class="text-neutro nav-link">Nosotros</a>
+            <a href="fuentes.html" class="text-neutro nav-link">Fuentes</a>
+            <a href="contacto.html" class="text-neutro nav-link">Contacto</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+      <div class="mb-10 text-center">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+          Eventos Pasados
+        </h1>
+        <p class="text-lg text-neutro">
+          Recuerdos de los grandes momentos vividos antes del 01 de Mayo de
+          2026.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        <article
+          class="bg-white rounded-xl shadow-sm flex flex-col md:flex-row overflow-hidden border border-gray-200 opacity-80 hover:opacity-100 transition-opacity"
+        >
+          <div class="md:w-1/3 relative h-48 md:h-auto">
+            <img
+              src="assets/images/Orquesta1.jpg"
+              alt="Sinfónica"
+              class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition duration-500"
+            />
+          </div>
+          <div class="p-6 md:w-2/3 flex flex-col justify-center">
+            <div class="flex items-center space-x-3 mb-2">
+              <span
+                class="bg-musica text-white text-xs font-bold px-2 py-1 rounded"
+                >Música</span
+              >
+              <time class="text-sm font-medium text-gray-500"
+                >15 de Marzo de 2026</time
+              >
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">
+              Concierto Sinfónica del Principado
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Auditorio Príncipe Felipe, Oviedo. Una velada mágica repasando los
+              grandes clásicos bajo la batuta del director invitado.
+            </p>
+            <a
+              href="evento-sinfonica.html"
+              class="text-musica font-semibold hover:underline"
+              >Ver galería fotográfica &rarr;</a
+            >
+          </div>
+        </article>
+
+        <article
+          class="bg-white rounded-xl shadow-sm flex flex-col md:flex-row overflow-hidden border border-gray-200 opacity-80 hover:opacity-100 transition-opacity"
+        >
+          <div class="md:w-1/3 relative h-48 md:h-auto">
+            <img
+              src="assets/images/AmericanBufalo.jpg"
+              alt="Teatro"
+              class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition duration-500"
+            />
+          </div>
+          <div class="p-6 md:w-2/3 flex flex-col justify-center">
+            <div class="flex items-center space-x-3 mb-2">
+              <span
+                class="bg-cine-teatro text-white text-xs font-bold px-2 py-1 rounded"
+                >Teatro</span
+              >
+              <time class="text-sm font-medium text-gray-500"
+                >6 de Febrero de 2026</time
+              >
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">
+              American Buffalo
+            </h3>
+            <p class="text-gray-600 mb-4">
+              American Buffalo es una obra de 1975 del dramaturgo estadounidense
+              David Mamet que se estrenó en el Goodman Theatre de Chicago.
+            </p>
+            <a href="#" class="text-cine-teatro font-semibold hover:underline"
+              >Ver resumen del evento &rarr;</a
+            >
+          </div>
+        </article>
+
+        <article
+          class="bg-white rounded-xl shadow-sm flex flex-col md:flex-row overflow-hidden border border-gray-200 opacity-80 hover:opacity-100 transition-opacity"
+        >
+          <div class="md:w-1/3 relative h-48 md:h-auto">
+            <img
+              src="assets/images/EvaristoVallejpg.jpg"
+              alt="Exposición"
+              class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition duration-500"
+            />
+          </div>
+          <div class="p-6 md:w-2/3 flex flex-col justify-center">
+            <div class="flex items-center space-x-3 mb-2">
+              <span
+                class="bg-expo text-white text-xs font-bold px-2 py-1 rounded"
+                >Exposición</span
+              >
+              <time class="text-sm font-medium text-gray-500"
+                >19 de Enero de 2026</time
+              >
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">
+              Miradas cruzadas | 75 aniversario del Museo
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Muestra colectiva con 130 obras de 48 artistas. Revisión histórica
+              del museo y su colección por el 75 aniverasario del museo Evaristo
+              Valle.
+            </p>
+            <a href="#" class="text-expo font-semibold hover:underline"
+              >Revivir la exposición &rarr;</a
+            >
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-12 mt-auto">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <div class="mb-2">
+            <img
+              src="assets/images/happines-and-co-propuesta-02.png"
+              alt="Happiness&Co"
+              class="h-10 w-auto brightness-0 invert"
+            />
+          </div>
+          <p class="text-gray-400 text-sm">
+            Tu agenda cultural joven y dinámica en Asturias.
+          </p>
+        </div>
+        <div class="flex space-x-6 mb-6 md:mb-0">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors"
+            >Instagram</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white transition-colors"
+            >Twitter</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white transition-colors"
+            >TikTok</a
+          >
+        </div>
+        <div class="text-gray-500 text-sm">
+          &copy; 2026 HAPPINESS&Co. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
