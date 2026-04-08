@@ -7,7 +7,7 @@
 
 ## Descripción del Proyecto
 
-**Happiness & Co.** HAPPINESS&Co es una empresa joven y dina mica que se dedicada, en 
+**Happiness & Co.** HAPPINESS&Co es una empresa joven y dinamica que se dedicada, en 
 cuerpo y alma, al mundo del ocio. 
 
 Este proyecto forma parte de las asignaturas de:
