@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - HAPPINESS&Co</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="antialiased min-h-screen flex flex-col">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"><img src="assets/images/Logos/happines-and-co-propuesta-02.png" alt="Happiness&Co"
+                            class="h-12 w-auto"></a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-neutro nav-link">Inicio</a>
+                    <a href="proximos.html" class="text-neutro nav-link">Próximos Eventos</a>
+                    <a href="historial.html" class="text-neutro nav-link">Historial</a>
+                    <a href="nosotros.html" class="text-neutro nav-link">Nosotros</a>
+                    <a href="fuentes.html" class="text-neutro nav-link">Fuentes</a>
+                    <a href="contacto.html" class="text-musica nav-link">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex-grow max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border-t-8 border-musica">
+            <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Ponte en contacto</h1>
+            <p class="text-neutro mb-8">¿Tienes un evento que promocionar o alguna duda sobre nuestra agenda?
+                Escríbenos.</p>
+
+            <form action="#" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="input-formulario" required>
+                    </div>
+                    <div>
+                        <label for="apellidos" class="block text-sm font-medium text-gray-700">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" class="input-formulario" required>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="input-formulario" required>
+                    </div>
+                    <div>
+                        <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono
+                            (Opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" class="input-formulario">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="comentario" class="block text-sm font-medium text-gray-700">Tu Mensaje /
+                        Comentario</label>
+                    <textarea id="comentario" name="comentario" rows="5" class="input-formulario resize-none"
+                        required></textarea>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                        <input id="suscripcion" name="suscripcion" type="checkbox"
+                            class="w-4 h-4 text-musica border-gray-300 rounded focus:ring-musica">
+                    </div>
+                    <div class="ml-3 text-sm">
+                        <label for="suscripcion" class="font-medium text-gray-700">Deseo suscribirme al boletín de
+                            noticias y promociones.</label>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="w-full btn-principal text-lg">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <div class="mb-2"><img src="assets/images/Logos/happines-and-co-propuesta-02.png" alt="Happiness&Co"
+                        class="h-10 w-auto brightness-0 invert"></div>
+                <p class="text-gray-400 text-sm">Tu agenda cultural joven y dinámica en Asturias.</p>
+            </div>
+            <div class="flex space-x-6 mb-6 md:mb-0">
+                <a href="https://www.instagram.com/" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="https://x.com/" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors">Twitter</a>
+                <a href="https://www.tiktok.com/es/" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors">TikTok</a>
+            </div>
+            <div class="text-gray-500 text-sm">
+                &copy; 2026 HAPPINESS&Co. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+</html>
