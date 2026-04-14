@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Todos Inicio</title>
+        <description>Agenda de eventos de cultura, música, exposiciones y cine en Gijón.</description>
+        <language>es-ES</language>
+        <link>https://www.HappinessandCo.com/eventos</link>
+        <item>
+            <title>Metrópoli Gijón 2026</title>
+            <description>Metrópoli Gijón es un gran festival de cultura, música y entretenimiento
+                que se celebra anualmente durante el verano en el Recinto Ferial Luis Adaro de
+                Gijón.</description>
+            <link>https://www.tusitio.com/evento-metropoli.html</link>
+            <category>Música</category>
+            <pubDate>Mon, 15 Jun 2026 12:00:00 +0100</pubDate>
+        </item>
+
+        <item>
+            <title>De rerum natura</title>
+            <description>Un viaje a lo recóndito a través de la obra de seis artistas de distinta
+                expresión y técnica que, sin embargo, hallan en la naturaleza, su observación e
+                inmersión, el aliento de su producción.</description>
+            <link>https://www.tusitio.com/evento-rerum-natura.html</link>
+            <category>Exposición</category>
+            <pubDate>Fri, 05 Jun 2026 12:00:00 +0100</pubDate>
+        </item>
+
+        <item>
+            <title>The Odyssey</title>
+            <description>Una epopeya mitológica que sigue la historia de Odiseo y su largo viaje a
+                casa, de 10 años de duración, tras la guerra de Troya.</description>
+            <link>https://www.tusitio.com/evento-TheOdyssey.html</link>
+            <category>Cine</category>
+            <pubDate>Thu, 25 Jun 2026 12:00:00 +0100</pubDate>
+        </item>
+
+        <item>
+            <title>American Buffalo</title>
+            <description>American Buffalo es una obra de 1975 del dramaturgo estadounidense David
+                Mamet que se estrenó en el Goodman Theatre de Chicago.</description>
+            <link>https://www.tusitio.com/evento-AmericanBuffalo.html</link>
+            <category>Teatro</category>
+            <pubDate>Thu, 01 Jan 2026 12:00:00 +0100</pubDate>
+        </item>
+
+        <item>
+            <title>Concierto Sinfónica del Principado</title>
+            <description>La Orquesta Sinfónica del Principado de Asturias (OSPA) ofreció una velada
+                inolvidable repasando algunas de las obras más emblemáticas del repertorio clásico y
+                romántico. Bajo la batuta del director invitado internacional, el auditorio vibró
+                con interpretaciones magistrales que reafirmaron la calidad de nuestra orquesta
+                regional.</description>
+            <link>https://www.tusitio.com/evento-sinfonica.html</link>
+            <category>Música</category>
+            <pubDate>Mon, 12 Jan 2026 12:00:00 +0100</pubDate>
+        </item>
+
+        <item>
+            <title>Miradas cruzadas | 75 aniversario del Museo</title>
+            <description>Muestra colectiva con 130 obras de 48 artistas. Revisión histórica del
+                museo y su colección por el 75 aniverasario del museo Evaristo Valle.</description>
+            <link>https://www.tusitio.com/evento-EvaristoValle.html</link>
+            <category>Exposición</category>
+            <pubDate>Sat, 24 Jan 2026 12:00:00 +0100</pubDate>
+        </item>
+    </channel>
+</rss>
