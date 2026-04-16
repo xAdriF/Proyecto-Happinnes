@@ -131,11 +131,11 @@ Los wireframes y mockups han sido diseñados previamente en **Figma** antes de c
 
 ### Sprints de Trabajo
 
-| Sprint | Objetivos |
-|--------|-----------|
-| **Semana 1**|  |
-| **Semana 2**|  |
-| **Semana 3** |  |
+| Sprint |
+|--------|
+| **Semana 1**|
+| **Semana 2**|
+| **Semana 3** |
 
 ---
 
