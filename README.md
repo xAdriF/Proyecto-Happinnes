@@ -127,18 +127,6 @@ Los wireframes y mockups han sido diseñados previamente en **Figma** antes de c
 
 ---
 
-## Planificación
-
-### Sprints de Trabajo
-
-| Sprint |
-|--------|
-| **Semana 1**|
-| **Semana 2**|
-| **Semana 3** |
-
----
-
 ## Instalación y Uso
 
 ### Requisitos Previos
@@ -178,10 +166,10 @@ Los wireframes y mockups han sido diseñados previamente en **Figma** antes de c
 
 | Módulo | Estado |
 |--------|--------|
-| Lenguaje de Marcas | En desarrollo |
-| Base de Datos | Pendiente |
-| Programación | Pendiente |
-| RSS | Pendiente |
+| Lenguaje de Marcas | Finalizado |
+| Base de Datos | Finalizado |
+| Programación | Finalizado |
+| RSS | Finalizado |
 
 ---
 
